@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vision</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="js/jquery.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 25px;
+      background-color: #a9dddd;
+      background-attachment: fixed;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="w3-bar w3-light-grey w3-round-large">
+    <a href="index_EN.html" class="w3-bar-item w3-button w3-large" style="width:23.5%">Home</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+      onclick="minimising()">&#9776;</a>
+    <a href="Vision_DE.html"><button class="w3-round-large w3-bar-item w3-button w3-hide-medium w3-hide-large w3-large w3-right"><img
+          src="Bilder_KT/germany.PNG" class="w3-round-large" alt="german" width="45" height="25"></button></a>
+    <div class="w3-dropdown-click w3-mobile" style="width:24.35%">
+      <button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain1()">
+        About Us <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dd1" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%">
+        <a href="About_Us_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+        <a href="Career_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Careers</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile" style="width:24.35%">
+      <button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain2()">
+        Development <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dd2" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%">
+        <a href="App_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+        <a href="Prototype_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototype</a>
+        <a href="Filter_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+        <a href="ML_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+      </div>
+    </div>
+    <a href="Vision_EN.html" class="w3-bar-item w3-button w3-large w3-text-black w3-hide-small"
+      style="width:22%">Vision</a>
+    <a href="Vision_DE.html"><button class="w3-bar-item w3-light-grey w3-hide-small"><img src="Bilder_KT/germany.PNG"
+         class="w3-round-large"  alt="german" width="45" height="25"></button></a>
+
+  </div>
+
+
+  <div id="smallDD" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-round-large">
+    <div class="w3-dropdown-click w3-mobile">
+      <button class="w3-button w3-large" onclick="dropdownSmall1()">
+        About Us <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dds1" class="w3-dropdown-content w3-bar-block w3-light-grey">
+        <a href="About_Us_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+        <a href="Career_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Careers</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile">
+      <button class="w3-button w3-large" onclick="dropdownSmall2()">
+        Development <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dds2" class="w3-dropdown-content w3-bar-block w3-light-grey">
+        <a href="App_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+        <a href="Prototype_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototype</a>
+        <a href="Filter_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+        <a href="ML_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile">
+      <a href="Vision_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Vision</a>
+    </div>
+  </div>
+
+  <script src="dropdown.js">
+  </script>
+
+  <main>
+
+    <div class="row">
+      <div class="card w3-round-large">
+        <div class="w3-row">
+          <div class="w3-half w3-container">
+            <h1> Make water clean again! </h1>
+               <p>
+              In addition to large plastic parts in the sea, microplastic particles pose an enormous risk to humans
+              and
+              nature. <br><br>
+              In contrast to large plastic parts, it has so far been difficult to get the <b>microparticles</b> out of
+              the water. <br>
+              The large filter nets to tackle the problem, contrary to their purpose, are destroying habitats and
+              killing sea creatures. <br>
+              <br>
+              Our idea is to copy the already perfect body of the largest sea dweller (the blue whale) and use its
+              impressive water flow for our purposes.
+              <br>
+              Instead of krill like the blue whale, <b>we filter microplastic particles</b> out of the water and do
+              not
+              endanger neither habitats nor marine life.
+            </p>
+          </div>
+          <div class="w3-half w3-container">
+            <img src="Bilder_KT/Tropfen.JPG" class="w3-round-large" alt="Waterdrop" style="width: 100%;">
+          </div>
+        </div>
+        <div class="w3-row">
+          <div class="w3-half w3-container">
+            <img src="Bilder_KT/Blauwal.JPG" class="w3-round-large" alt="Bluewale" style="width: 100%;">
+          </div>
+          <div class="w3-half w3-container">
+            <h1> Efficient design and untouchable </h1>
+            <p>
+              <br>Due to its size alone, the blue whale is hardly hunted by other sea creatures. <br>
+              With a few technical upgrades (short-term interference signal), the last few rare attacks can be
+              stopped.
+              <br>We are still at the beginning of the development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card w3-round-large">
+        <div class="w3-row">
+          <div class="w3-half w3-container">
+            <h1> Our goal in the field of robotics </h1>
+            <p>
+              The ultimate goal is a robotic whale that filters microplastics and small plastics out of the water
+              instead of plankton. <br>
+              In contrast to conventional nets with the same goals, no other life forms would die with our method.
+              <br><br>
+              All marine animals that can counteract the migration of a blue whale seem to do so instinctively. <br><br>
+              Nets also drag on the seabed and therefore destroy habitats.
+
+              On this page, you can see our progress in robotics. <br>
+
+              Difficulties here: <br> <br>
+
+            <ul>
+              <li>Vision </li>
+              <li>Autonomous safe behavior under water</li>
+              <li>Filter system</li>
+            </ul>
+
+
+            </p>
+          </div>
+          <div class="w3-half w3-container">
+            <img src="Bilder-Robotic/Whale.PNG" class="w3-round-large" alt="WhaleArt" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="row">
+      <div class="card w3-round-large">
+        <div class="w3-row">
+
+          <a href="Career_EN.html" class="w3-third w3-center w3-mobile">Careers</a>
+          <a href="imprint_EN.html" class="w3-third w3-center w3-mobile">Imprint</a>
+          <a href="About_Us_EN.html" class="w3-third w3-center w3-mobile">About Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

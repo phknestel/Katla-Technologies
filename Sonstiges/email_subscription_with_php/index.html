@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Email Subscription by CodexWorld</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!-- web-fonts -->
+<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+
+<!-- Stylesheet file -->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		<h1>Email Subscription Form</h1>
+	</div>
+	<div class="main-content">
+		<div class="content-frm">
+			<div class="top">
+				<h2>Subscribe Now</h2>
+				<h3>Enroll for our <span>free</span> updates</h3>
+				<li>We will send you weekly updates</li>
+				<li>Get daily articles and latest news</li>
+			</div>
+			<div class="bottom">
+				<!-- Display form submission status -->
+				<div class="status"></div>
+				
+				<!-- Subscription form -->
+				<form action="#" id="subsFrm" method="post">
+					<input type="text" id="name" placeholder="Full Name" required="">
+					<input type="email" id="email" placeholder="E-mail" required="">
+					<input type="button" id="subscribeBtn" value="Subscribe Now">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>&copy; 2020 CodexWorld. All rights reserved | Developed by <a href="https://www.codexworld.com">CodexWorld</a></p>
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('#subscribeBtn').on('click', function(){
+		// Remove previous status message
+		$('.status').html('');
+		
+		// Email and name regex
+		var regEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+		var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+		
+		// Get input values
+		var name = $('#name').val();
+		var email = $('#email').val();
+		
+		// Validate input fields
+		if(name.trim() == '' ){
+			alert('Please enter your name.');
+        	$('#name').focus();
+			return false;
+		}else if (!regName.test(name)){
+			alert('Please enter a valid name (first & last name).');
+			$('#name').focus();
+			return false;
+		}else if(email.trim() == '' ){
+			alert('Please enter your email.');
+        	$('#email').focus();
+			return false;
+		}else if(email.trim() != '' && !regEmail.test(email)){
+			alert('Please enter a valid email.');
+        	$('#email').focus();
+			return false;
+		}else{
+			// Post subscription form via Ajax
+			$.ajax({
+				type:'POST',
+				url:'subscription.php',
+				dataType: "json",
+				data:{subscribe:1,name:name,email:email},
+				beforeSend: function () {
+					$('#subscribeBtn').attr("disabled", "disabled");
+					$('.content-frm').css('opacity', '.5');
+				},
+				success:function(data){
+					if(data.status == 'ok'){
+						$('#subsFrm')[0].reset();
+						$('.status').html('<p class="success">'+data.msg+'</p>');
+					}else{
+						$('.status').html('<p class="error">'+data.msg+'</p>');
+					}
+					$('#subscribeBtn').removeAttr("disabled");
+					$('.content-frm').css('opacity', '');
+				}
+			});
+		}
+	});
+});
+</script>
+</body>
+</html>

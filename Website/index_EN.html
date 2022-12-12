@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>KATLA-Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="js/jquery.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 25px;
+      background-color: #a9dddd;
+      background-attachment: fixed;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="w3-bar w3-light-grey w3-round-large">
+    <a href="index_EN.html" class="w3-bar-item w3-button w3-large" style="width:23.5%">Home</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+      onclick="minimising()">&#9776;</a>
+    <a href="index_DE.html"><button class="w3-round-large w3-bar-item w3-button w3-hide-medium w3-hide-large w3-large w3-right"><img
+          src="Bilder_KT/germany.PNG" class="w3-round-large" alt="german" width="45" height="25"></button></a>
+    <div class="w3-dropdown-click w3-mobile" style="width:24.35%">
+      <button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain1()">
+        About Us <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dd1" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%">
+        <a href="About_Us_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+        <a href="Career_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Careers</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile" style="width:24.35%">
+      <button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain2()">
+        Development <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dd2" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%">
+        <a href="App_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+        <a href="Prototype_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototype</a>
+        <a href="Filter_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+        <a href="ML_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+      </div>
+    </div>
+    <a href="Vision_EN.html" class="w3-bar-item w3-button w3-large w3-text-black w3-hide-small"
+      style="width:22%">Vision</a>
+    <a href="index_DE.html"><button class="w3-bar-item w3-light-grey w3-hide-small"><img src="Bilder_KT/germany.PNG"
+         class="w3-round-large"  alt="german" width="45" height="25"></button></a>
+  </div>
+
+
+  <div id="smallDD" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-round-large">
+    <div class="w3-dropdown-click w3-mobile">
+      <button class="w3-button w3-large" onclick="dropdownSmall1()">
+        About Us <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dds1" class="w3-dropdown-content w3-bar-block w3-light-grey">
+        <a href="About_Us_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+        <a href="Career_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Careers</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile">
+      <button class="w3-button w3-large" onclick="dropdownSmall2()">
+        Development <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dds2" class="w3-dropdown-content w3-bar-block w3-light-grey">
+        <a href="App_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+        <a href="Prototype_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototype</a>
+        <a href="Filter_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+        <a href="ML_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile">
+      <a href="Vision_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Vision</a>
+    </div>
+  </div>
+
+  <script src="dropdown.js">
+  </script>
+
+  <main>
+
+    <div class="w3-container w3-center w3-hide-small w3-margin-top">
+      <img src="Bilder_KT/Logo.PNG" alt="Logo" style="width: 50%;">
+    </div>
+
+    <div class="w3-container w3-center w3-hide-large w3-hide-medium w3-margin-top">
+      <img src="Bilder_KT/Logo.PNG" alt="Logo" style="width: 100%;">
+    </div>
+
+    <div class="row">
+
+      <div class="card w3-center w3-round-large">
+        <h1>Welcome to Katla-Technologies</h1>
+      </div>
+
+      <div class="row">
+        <div class="card w3-round-large">
+          <div class="w3-row">
+            <div class="w3-half w3-container">
+              <img src="Bilder_KT/App.PNG" class="w3-round-large" alt="AppisComing" style="width: 100%;">
+            </div>
+            <div class="w3-half w3-container  w3-display-container">
+              <h1>Our first app is coming soon</h1>
+              <p>
+                Our prototype will be connected to our app to control it and evaluate sensor data.
+
+              <ul>
+                <li>Control of the prototype</li>
+                <li>Temperature, visibility and brightness</li>
+                <li>Cartography of the surroundings</li>
+              </ul>
+              <br>
+              <br>
+              </p>
+              <p>
+								<a href="App_DE.html" class="w3-button w3-block w3-dark-gray w3-round w3-margin-top w3-display-bottomright">Further Information</a>
+							</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+				<div class="card w3-round-large">
+					<div class="w3-row">
+						<div class="w3-half w3-container w3-display-container">
+              <h1>We are currently working on our first prototype</h1>
+							<p>
+								Our first prototype is to be developed in the form of a 50cm long fish.
+								<br>
+								<p>Scope of functions:</p>
+
+							<ul>
+								<li>use under water for several hours possible</li>
+								<li>Automatic reaction to obstacles and currents</li>
+								<li>Control of the prototype via App</li>
+								<li>Measurement of temperature, visibility and brightness</li>
+								<li>Cartography of the surroundings</li>
+							</ul>
+							<br>
+							<br>
+							</p>
+							<p>
+								<a href="Prototype_DE.html" class="w3-button w3-block w3-dark-gray w3-round w3-margin-top w3-display-bottomleft">Further Information</a>
+							</p>
+						</div>
+						<div class="w3-half w3-container w3-center">
+							<img src="Bilder_KT/Robot.PNG" class="w3-round-large w3-margin-top" alt="Robotik" style="width: 60%;">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+      <div class="card w3-round-large">
+        <p>So that you do not miss anything in the future, you can register for our newsletter here.
+        </p>
+        <div class="w3-container w3-dark-gray w3-round-large">
+          <h2 class="newsletter">Newsletter</h2>
+        </div>
+        <div class="bottom">
+          <!-- Display form submission status -->
+          <div class="status w3-center w3-panel w3-pale-green w3-border"></div>
+
+          <!-- Subscription form -->
+          <form class="w3-container" id="subsFrm" method="POST" action="/newsletter-signup.php">
+            <p>
+              <label class="w3-text-black" for="name"><b>Name</b></label>
+              <input class="w3-input w3-border w3-white" id="name" placeholder="Full Name"></p>
+            <p>
+              <label class="w3-text-black" for="email"><b>E-Mail</b></label>
+              <input class="w3-input w3-border w3-white" id="email" placeholder="E-Mail"></p>
+            <p>
+              <button class="w3-btn w3-dark-gray w3-round-large" type="button" id="subscribeBtn"
+                value="Subscribe Now">Register</button>
+            </p>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="row">
+      <div class="card w3-round-large">
+        <div class="w3-row">
+
+          <a href="Career_EN.html" class="w3-third w3-center w3-mobile">Careers</a>
+          <a href="imprint_EN.html" class="w3-third w3-center w3-mobile">Imprint</a>
+          <a href="About_Us_EN.html" class="w3-third w3-center w3-mobile">About Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      $('#subscribeBtn').on('click', function () {
+        // Remove previous status message
+        $('.status').html('');
+
+        // Email and name regex
+        var regEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+        // Get input values
+        var name = $('#name').val();
+        var email = $('#email').val();
+
+        // Validate input fields
+        if (name.trim() == '') {
+          alert('Please enter your name.');
+          $('#name').focus();
+          return false;
+        } else if (!regName.test(name)) {
+          alert('Please enter a valid name (first & last name).');
+          $('#name').focus();
+          return false;
+        } else if (email.trim() == '') {
+          alert('Please enter your email.');
+          $('#email').focus();
+          return false;
+        } else if (email.trim() != '' && !regEmail.test(email)) {
+          alert('Please enter a valid email.');
+          $('#email').focus();
+          return false;
+        } else {
+          // Post subscription form via Ajax
+          $.ajax({
+            type: 'POST',
+            url: 'subscription.php',
+            dataType: "json",
+            data: {
+              subscribe: 1,
+              name: name,
+              email: email
+            },
+            beforeSend: function () {
+              $('#subscribeBtn').attr("disabled", "disabled");
+              $('.content-frm').css('opacity', '.5');
+            },
+            success: function (data) {
+              if (data.status == 'ok') {
+                $('#subsFrm')[0].reset();
+                $('.status').html('<p class="success">' + data.msg + '</p>');
+              } else {
+                $('.status').html('<p class="error">' + data.msg + '</p>');
+              }
+              $('#subscribeBtn').removeAttr("disabled");
+              $('.content-frm').css('opacity', '');
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

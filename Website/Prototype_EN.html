@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="js/jquery.min.js"></script>
+
+  <style>
+  body {
+    font-family: Arial;
+    padding: 25px;
+    background-color: #a9dddd;
+    background-attachment: fixed;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+      left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+      left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="w3-bar w3-light-grey w3-round-large">
+    <a href="index_EN.html" class="w3-bar-item w3-button w3-large" style="width:23.5%">Home</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+      onclick="minimising()">&#9776;</a>
+    <a href="Prototype_DE.html"><button
+        class="w3-round-large w3-bar-item w3-button w3-hide-medium w3-hide-large w3-large w3-right"><img src="Bilder_KT/germany.PNG"
+         class="w3-round-large"  alt="german" width="45" height="25"></button></a>
+    <div class="w3-dropdown-click w3-mobile" style="width:24.35%">
+      <button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain1()">
+        About Us <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dd1" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%">
+        <a href="About_Us_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+        <a href="Career_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Careers</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile" style="width:24.35%">
+      <button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain2()">
+        Development <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dd2" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%">
+        <a href="App_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+        <a href="Prototype_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototype</a>
+        <a href="Filter_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+        <a href="ML_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+      </div>
+    </div>
+    <a href="Vision_EN.html" class="w3-bar-item w3-button w3-large w3-text-black w3-hide-small"
+      style="width:22%">Vision</a>
+    <a href="Prototype_DE.html"><button class="w3-bar-item w3-light-grey w3-hide-small"><img src="Bilder_KT/germany.PNG"
+         class="w3-round-large"  alt="german" width="45" height="25"></button></a>
+
+  </div>
+
+
+  <div id="smallDD" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-round-large">
+    <div class="w3-dropdown-click w3-mobile">
+      <button class="w3-button w3-large" onclick="dropdownSmall1()">
+        About Us <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dds1" class="w3-dropdown-content w3-bar-block w3-light-grey">
+        <a href="About_Us_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+        <a href="Career_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Careers</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile">
+      <button class="w3-button w3-large" onclick="dropdownSmall2()">
+        Development <i class="fa fa-caret-down"></i>
+      </button>
+      <div id="dds2" class="w3-dropdown-content w3-bar-block w3-light-grey">
+        <a href="App_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+        <a href="Prototype_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototype</a>
+        <a href="Filter_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+        <a href="ML_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+      </div>
+    </div>
+    <div class="w3-dropdown-click w3-mobile">
+      <a href="Vision_EN.html" class="w3-bar-item w3-large w3-button w3-mobile">Vision</a>
+    </div>
+  </div>
+
+  <script src="dropdown.js">
+  </script>
+
+  <main>
+
+    <div class="header w3-round-large">
+  		<h1>Prototype</h1>
+  		<h2>Here the progress of our prototype is shown</h2>
+  	</div>
+
+    <div class="row">
+      <div class="card w3-round-large">
+        <div class="w3-row">
+          <div class="w3-half w3-container w3-display-container">
+            <h1>We are currently working on our first prototype</h1>
+            <p>
+              Our first prototype is to be developed in the form of a 50cm long fish.
+              <br>
+              <p>Scope of functions:</p>
+
+            <ul>
+              <li>use under water for several hours possible</li>
+              <li>Automatic reaction to obstacles and currents</li>
+              <li>Control of the prototype via App</li>
+              <li>Measurement of temperature, visibility and brightness</li>
+              <li>Cartography of the surroundings</li>
+            </ul>
+            </p>
+          </div>
+          <div class="w3-half w3-container w3-center">
+            <img src="Bilder_KT/Robot.PNG" class="w3-round-large w3-margin-top" alt="Robotik" style="width: 60%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="timeline w3-margin-top">
+      <div class="container left">
+        <div class="content">
+          <h2>Step 1: Done</h2>
+          <p>Training in electrical engineering using the Elegoo Starter Kit (basics)</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Step 2: To-Do</h2>
+          <p>Develop first basic circuit </p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>Step 3: To-Do</h2>
+          <p>Develop and test electric car with one motor Pro-axis.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Step 4: To-Do</h2>
+          <p>Implementation of a targeted control of individual motors</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h2>Step 5: To-Do</h2>
+          <p>Testing a radio connection <br> Range of functions: <br>
+          <ul>
+            <li>rudimentary control</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h2>Step 6: To-Do</h2>
+          <p>3D model of the prototype developed in Fusion-360<br>
+            <ul>
+              <li>hull</li>
+              <li> Mounting surfaces for circuit boards, accumulators, sensors and motors</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    <div class="container left">
+      <div class="content">
+        <h2>Step 7: To-Do</h2>
+        <p>Building and testing of the first prototype</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>Step 8: To-Do</h2>
+        <p>Connecting the cross-platform application<br>
+          <ul>
+            <li>rudimentary control</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>Step 9: To-Do</h2>
+        <p>Testing the more complex requirements of the final application</p>
+        <br>
+        <ul>
+          <li>control of the prototype</li>
+          <li>temperature, visibility and brightness</li>
+          <li>Cartography of the surroundings</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>Step 10: To-Do</h2>
+        <p>Automation of stabilization tasks<br>
+          <ul>
+            <li>Automatic straightening under flow influences</li>
+            <li>Automatic evasion or stopping on obstacle detection</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="row">
+      <div class="card w3-round-large">
+        <div class="w3-row">
+
+          <a href="Career_EN.html" class="w3-third w3-center w3-mobile">Careers</a>
+          <a href="imprint_EN.html" class="w3-third w3-center w3-mobile">Imprint</a>
+          <a href="About_Us_EN.html" class="w3-third w3-center w3-mobile">About Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Über uns</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="Favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="Favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="Favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="Favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="Favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="Favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="Favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<style>
+		body {
+			font-family: Arial;
+			padding: 25px;
+			background-color: #a9dddd;
+			background-attachment: fixed;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="w3-bar w3-light-grey w3-round-large">
+		<a href="index_DE.html" class="w3-bar-item w3-button w3-large" style="width:23.5%" height="25">Start</a>
+		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+			onclick="minimising()">&#9776;</a>
+		<a href="About_Us_EN.html"><button
+				class="w3-bar-item w3-round-large w3-button w3-hide-medium w3-hide-large w3-large w3-right"><img
+					src="Bilder_KT/englisch.PNG" class="w3-round-large" alt="english" width="45"
+					height="25"></button></a>
+		<div class="w3-dropdown-click w3-mobile w3-light-grey" style="width:24.35%" height="25">
+			<button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain1()">
+				Über uns <i class="fa fa-caret-down"></i>
+			</button>
+			<div id="dd1" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%" height="25">
+				<a href="About_Us_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+				<a href="Career_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Karriere</a>
+			</div>
+		</div>
+		<div class="w3-dropdown-click w3-mobile" style="width:24.35%" height="25">
+			<button class="w3-block w3-button w3-large w3-hide-small" onclick="dropdownMain2()">
+				Entwicklung <i class="fa fa-caret-down"></i>
+			</button>
+			<div id="dd2" class="w3-dropdown-content w3-bar-block w3-light-grey" style="width:23.5%" height="25">
+				<a href="App_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+				<a href="Prototype_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototyp</a>
+				<a href="Filter_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+				<a href="ML_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+			</div>
+		</div>
+		<a href="Vision_DE.html" class="w3-bar-item w3-button w3-large w3-hide-small" style="width:22%"
+			height="25">Vision</a>
+		<a href="About_Us_EN.html"><button class="w3-round-large w3-bar-item w3-light-grey w3-hide-small"><img
+					class="w3-round-large" src="Bilder_KT/englisch.PNG" alt="english" width="45"
+					height="25"></button></a>
+	</div>
+
+	<div id="smallDD" class="w3-bar-block w3-light-grey w3-hide w3-hide-large w3-hide-medium w3-round-large">
+		<div class="w3-dropdown-click w3-mobile">
+			<button class="w3-button w3-large" onclick="dropdownSmall1()">
+				Über uns <i class="fa fa-caret-down"></i>
+			</button>
+			<div id="dds1" class="w3-dropdown-content w3-bar-block w3-light-grey">
+				<a href="About_Us_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Team</a>
+				<a href="Career_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Karriere</a>
+			</div>
+		</div>
+		<div class="w3-dropdown-click w3-mobile">
+			<button class="w3-button w3-large" onclick="dropdownSmall2()">
+				Entwicklung <i class="fa fa-caret-down"></i>
+			</button>
+			<div id="dds2" class="w3-dropdown-content w3-bar-block w3-light-grey">
+				<a href="App_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">App</a>
+				<a href="Prototype_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Prototyp</a>
+				<a href="Filter_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Filtersystem</a>
+				<a href="ML_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Machine Learning</a>
+			</div>
+		</div>
+		<div class="w3-dropdown-click w3-mobile">
+			<a href="Vision_DE.html" class="w3-bar-item w3-large w3-button w3-mobile">Vision</a>
+		</div>
+	</div>
+
+	<script src="dropdown.js">
+	</script>
+
+	<main>
+
+		<div class="header w3-round-large">
+			<h1>Unser Team</h1>
+			<h2>Jetzt wissen Sie, wer hinter dem ganzen steckt.</h2>
+		</div>
+
+		<div class="w3-container w3-white w3-round-large">
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/PhilippKnestel.jpeg" alt="Philipp Knestel"
+						class="w3-round-large w3-margin w3-hide-small" width="93%">
+					<img src="Bilder_Personal/PhilippKnestel.jpeg" alt="Philipp Knestel"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Philipp Knestel</h1>
+						<p class="titlePC">Co-Founder</p>
+						<p>Technische Universität München</p>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="https://www.linkedin.com/in/philipp-knestel-b24806142/"><i
+								class="fa fa-linkedin"></i></a>
+						<p>
+							<button class="w3-round-large"><a href="mailto:p.k@katla-technologies.com">Kontakt</a>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/DanielCzeguhn.jpeg" alt="Daniel Czeguhn"
+						class="w3-round-large w3-margin w3-hide-small" width="93%">
+					<img src="Bilder_Personal/DanielCzeguhn.jpeg" alt="Daniel Czeguhn"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Daniel Czeguhn</h1>
+						<p class="titlePC">Co-Founder</p>
+						<p>Tech. Assist. der Informatik</p>
+						<a href="https://twitter.com/czeguhn_daniel"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.linkedin.com/in/daniel-czeguhn-46752415a/"><i
+								class="fa fa-linkedin"></i></a>
+						<p>
+							<button class="w3-round-large"><a
+									href="mailto:d.czeguhn@katla-technologies.com">Kontakt</a></button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/PhilippOliver.jpeg" alt="Philipp Oliver"
+						class="w3-margin w3-hide-small w3-round-large" width="93%">
+					<img src="Bilder_Personal/PhilippOliver.jpeg" alt="Philipp Oliver"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Philipp Oliver</h1>
+						<p class="titlePC">Design</p>
+						<p>Hochschule München</p>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="https://www.linkedin.com/in/philipp-oliver-8920a41a1/"><i
+								class="fa fa-linkedin"></i></a>
+						<p>
+							<button class="w3-round-large"><a href="#">Kontakt</a> </button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/muster-mitarbeiter.jpeg" alt="Frederico Seelow"
+						class="w3-margin w3-hide-small w3-round-large" width="93%">
+					<img src="Bilder_Personal/muster-mitarbeiter.jpeg" alt="Frederico Seelow"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Frederico Seelow</h1>
+						<p class="titlePC">Software Entwickler / Forschung</p>
+						<p>Technische Universität München</p>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<p>
+							<button class="w3-round-large"><a
+									href="mailto:frederico.seelow@katla-technologies.com">Kontakt</a> </button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/EduardGross.jpg" alt="Eduard Gross"
+						class="w3-margin w3-hide-small w3-round-large" width="93%">
+					<img src="Bilder_Personal/EduardGross.jpg" alt="Eduard Gross"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Eduard Gross</h1>
+						<p class="titlePC">Entwickler</p>
+						<p>Tech. Assist. der Informatik</p>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<p>
+							<button class="w3-round-large"><a
+									href="mailto:eduard.gross@katla-technologies.com">Kontakt</a>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/muster-mitarbeiter.jpeg" alt="Dominik Seethaler"
+						class="w3-margin w3-hide-small w3-round-large" width="93%">
+					<img src="Bilder_Personal/muster-mitarbeiter.jpeg" alt="Dominik Seethaler"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Dominik Seethaler</h1>
+						<p class="titlePC">Entwickler</p>
+						<p>Tech. Assist. der Informatik</p>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<p>
+							<button class="w3-round-large"><a href="#">Kontakt</a> </button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="w3-card-2 w3-light-grey w3-third w3-mobile">
+				<div class="w3-margin">
+					<img src="Bilder_Personal/KorayArpat.png" alt="Koray Arpat"
+						class="w3-margin w3-hide-small w3-round-large" width="93%">
+					<img src="Bilder_Personal/KorayArpat.png" alt="Koray Arpat"
+						class="w3-margin w3-hide-medium w3-hide-large w3-round-large" width="90%">
+					<div class="w3-container w3-center">
+						<h1>Koray Arpat</h1>
+						<p class="titlePC">Entwickler</p>
+						<p>Tech. Assist. der Informatik</p>
+						<a href="#"><i class="fa fa-dribbble"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<p>
+							<button><a href="#">Kontakt</a> </button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</main>
+
+	<div class="footer w3-round-large">
+		<h2>Unser Team wächst weiter!</h2>
+	</div>
+
+
+	<footer>
+		<div class="row">
+			<div class="card w3-round-large">
+				<div class="w3-row">
+
+					<a href="Career_DE.html" class="w3-half w3-center w3-mobile">Karriere</a>
+					<a href="imprint_DE.html" class="w3-half w3-center w3-mobile">Impressum</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

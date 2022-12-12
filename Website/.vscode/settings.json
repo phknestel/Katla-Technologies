@@ -1,0 +1,10 @@
+{
+    "atlascode.bitbucket.issues.createJiraEnabled": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "atlascode.jira.enabled": false
+}
